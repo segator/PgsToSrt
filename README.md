@@ -29,7 +29,11 @@ dotnet PgsToSrt.dll --input video1.mkv --output video1.srt --track 4
 ```
 #### Example (Docker)
 ```
-docker run -it --rm -v /data:/data -e INPUT=/data/myImageSubtitle.sup -e OUTPUT=/data/myTextSubtitle.srt segator/pgstosrt
+docker run -it --rm -v /data:/data \
+           -e INPUT=/data/myImageSubtitle.sup \
+           -e OUTPUT=/data/myTextSubtitle.srt \
+           -e LANGUAGE=eng \
+           segator/pgstosrt
 ```
 
 ### Build
